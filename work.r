@@ -92,7 +92,10 @@ OCT2016df = crime[(crime$Month == "10" & crime$Year == "2016"),]
 NOV2016df = crime[(crime$Month == "11" & crime$Year == "2016"),]
 DEC2016df = crime[(crime$Month == "12" & crime$Year == "2016"),]
 
-t.test(AUG2011df, SEP2011df)
+# lil STD function
+rineySTD = function(x) sd(x)/sqrt(length(x))
+
+nrow(AUG2011df)
 
 summary(AUG2011df)
 summary(SEP2011df)
