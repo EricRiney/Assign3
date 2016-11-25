@@ -94,6 +94,8 @@ DEC2016df = crime[1:sum(crime$Month == "12" & crime$Year == "2016"),]
 
 t.test(AUG2011df, SEP2011df)
 
+summary(AUG2011df)
+
 totalCrimes = sum(complete.cases(crime$Month))
 
 
