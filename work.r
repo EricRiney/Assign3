@@ -108,7 +108,7 @@ summary(DEC2011df)
 dec2011Vec = (seq(as.Date("2011-12-01"), as.Date("2011-12-31"), by="+1 day"))
 
 # need mdy
-test = as.Date(DEC2011df$Date.Reported)
+Dates <- format(as.POSIXct(strptime(DEC2011df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%m/%d/%Y")
 
 # populates vector with number of offences that occur each day
 for (i in  1:length(dec2011Vec)) {
