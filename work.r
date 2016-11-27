@@ -99,8 +99,15 @@ rineySTD = function(x) sd(x)/sqrt(length(x))        # assumes no missing values
 # lil STE function
 rineySTE = function(x) sqrt(var(x)/length(x))       # assumes no missing values
 
+summary(DEC2011df)
+
 # need to run two sample t-test
-nrow(AUG2011df)
+dec2011Vec = length(seq(as.Date("2011-12-01"), as.Date("2011-12-31"), by="+1 day"))
+
+DEC2011df$Occurred.Date.or.Date.Range.Start
+
+test = c(1,7:9)
+
 
 summary(AUG2011df)
 summary(SEP2011df)
