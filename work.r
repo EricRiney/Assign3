@@ -93,8 +93,12 @@ NOV2016df = crime[(crime$Month == "11" & crime$Year == "2016"),]
 DEC2016df = crime[(crime$Month == "12" & crime$Year == "2016"),]
 
 # lil STD function
-rineySTD = function(x) sd(x)/sqrt(length(x))
+rineySTD = function(x) sd(x)/sqrt(length(x))        # assumes no missing values
 
+# lil STE function
+rineySTE = function(x) sqrt(var(x)/length(x))       # assumes no missing values
+
+# need to run two sample t-test
 nrow(AUG2011df)
 
 summary(AUG2011df)
