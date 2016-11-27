@@ -2,6 +2,7 @@
 # INFO 370
 
 library(MASS) # need fractions
+require(zoo)  # date stuff
 
 setwd("/Users/ericriner/Documents/Code/UW/370/Assign3")
 
@@ -105,7 +106,6 @@ summary(AUG2011df)
 summary(SEP2011df)
 
 totalCrimes = sum(complete.cases(crime$Month))
-
 
 
 ### Ash Code ###
