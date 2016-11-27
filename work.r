@@ -107,10 +107,13 @@ summary(DEC2011df)
 # vector for number of days in a month
 dec2011Vec = (seq(as.Date("2011-12-01"), as.Date("2011-12-31"), by="+1 day"))
 
+# need mdy
+test = as.Date(DEC2011df$Date.Reported)
+
 # populates vector with number of offences that occur each day
 for (i in  1:length(dec2011Vec)) {
-  if((dec2011Vec[i] == DEC2011df$Date.Reported)) {
-    dec2011Vec[i]+=1
+  if(dec2011Vec[i] == DEC2011df$Date.Reported){
+    dec2011Vec[i] +1
   }
   else if(!is.na(danglingNodes[i] != 0)) {
     danglingNodes[i]=0
