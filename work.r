@@ -104,29 +104,36 @@ summary(DEC2011df)
 
 ### need to run two sample t-test on shit ###
 
-# vector for number of days in a month
+# vector for number of days in dec 2011
 dec2011Vec = (seq(as.Date("2011-12-01"), as.Date("2011-12-31"), by="+1 day"))
-
-# need mdy
-Dates <- format(as.POSIXct(strptime(DEC2011df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%m/%d/%Y")
+dec2011CrimeDates <- format(as.POSIXct(strptime(DEC2011df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+dec2011CrimeDatesResults = vector(mode="numeric", length=0)
 
 # populates vector with number of offences that occur each day
-for (i in  1:length(dec2011Vec)) {
-  if(dec2011Vec[i] == DEC2011df$Date.Reported){
-    dec2011Vec[i] +1
-  }
-  else if(!is.na(danglingNodes[i] != 0)) {
-    danglingNodes[i]=0
+for (i in 1:length(dec2011Vec)) {
+  for (j in 1:length(dec2011CrimeDates)) {
+    if(dec2011Vec[i] == dec2011CrimeDates[j]){
+      dec2011CrimeDatesResults[i] = (1)
+    }
   }
 }
-dec2011Vec[dec2011Vec > ("2011-11-30")] <- NA
+dec2011CrimeDatesResults[is.na(dec2011CrimeDatesResults)] = 0
 
-DEC2011df$Occurred.Date.or.Date.Range.Start
+nov2011Vec = (seq(as.Date("2011-11-01"), as.Date("2011-11-30"), by="+1 day"))
+nov2011CrimeDates <- format(as.POSIXct(strptime(NOV2011df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+nov2011CrimeDatesResults = vector(mode="numeric", length=0)
 
-test = dmy(DEC2011df$Occurred.Date.or.Date.Range.Start)
+# populates vector with number of offences that occur each day
+for (i in 1:length(nov2011Vec)) {
+  for (j in 1:length(nov2011CrimeDates)) {
+    if(nov2011Vec[i] == nov2011CrimeDates[j]){
+      nov2011CrimeDatesResults[i] = (1)
+    }
+  }
+}
+nov2011CrimeDatesResults[is.na(nov2011CrimeDatesResults)] = 0
 
-summary(AUG2011df)
-summary(SEP2011df)
+t.test(nov2011CrimeDatesResults,dec2011CrimeDatesResults)
 
 totalCrimes = sum(complete.cases(crime$Month))
 
