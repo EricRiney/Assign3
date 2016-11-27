@@ -100,7 +100,6 @@ rineySTD = function(x) sd(x)/sqrt(length(x))        # assumes no missing values
 # lil STE function
 rineySTE = function(x) sqrt(var(x)/length(x))       # assumes no missing values
 
-summary(DEC2011df)
 
 ### need to run two sample t-test on shit ###
 
@@ -112,8 +111,10 @@ dec2011CrimeDatesResults = vector(mode="numeric", length=0)
 # populates vector with number of offences that occur each day
 for (i in 1:length(dec2011Vec)) {
   for (j in 1:length(dec2011CrimeDates)) {
+    counter = 0
     if(dec2011Vec[i] == dec2011CrimeDates[j]){
-      dec2011CrimeDatesResults[i] = (1)
+      counter = counter + 1
+      dec2011CrimeDatesResults[i] = (counter)
     }
   }
 }
@@ -126,8 +127,10 @@ nov2011CrimeDatesResults = vector(mode="numeric", length=0)
 # populates vector with number of offences that occur each day
 for (i in 1:length(nov2011Vec)) {
   for (j in 1:length(nov2011CrimeDates)) {
+    counter = 0
     if(nov2011Vec[i] == nov2011CrimeDates[j]){
-      nov2011CrimeDatesResults[i] = (1)
+      counter = counter + 1
+      nov2011CrimeDatesResults[i] = (counter)
     }
   }
 }
