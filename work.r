@@ -103,15 +103,43 @@ rineySTE = function(x) sqrt(var(x)/length(x))       # assumes no missing values
 
 ### need to run two sample t-test on shit ###
 
-# vector for number of days in dec 2011
+# aug 2011 Crime data
+aug2011Vec = (seq(as.Date("2011-8-01"), as.Date("2011-8-31"), by="+1 day"))
+aug2011CrimeDates <- format(as.POSIXct(strptime(AUG2011df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+aug2011CrimeDatesResults = vector(mode="numeric", length=0)
+for (i in 1:length(aug2011Vec)) {
+  counter = 0
+  for (j in 1:length(aug2011CrimeDates)) {
+    if(aug2011Vec[i] == aug2011CrimeDates[j]){
+      counter = counter + 1
+      aug2011CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+aug2011CrimeDatesResults[is.na(aug2011CrimeDatesResults)] = 0
+
+# nov 2011 Crime data
+nov2011Vec = (seq(as.Date("2011-11-01"), as.Date("2011-11-30"), by="+1 day"))
+nov2011CrimeDates <- format(as.POSIXct(strptime(NOV2011df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+nov2011CrimeDatesResults = vector(mode="numeric", length=0)
+for (i in 1:length(nov2011Vec)) {
+  counter = 0
+  for (j in 1:length(nov2011CrimeDates)) {
+    if(nov2011Vec[i] == nov2011CrimeDates[j]){
+      counter = counter + 1
+      nov2011CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+nov2011CrimeDatesResults[is.na(nov2011CrimeDatesResults)] = 0
+
+# dec 2011 Crime data
 dec2011Vec = (seq(as.Date("2011-12-01"), as.Date("2011-12-31"), by="+1 day"))
 dec2011CrimeDates <- format(as.POSIXct(strptime(DEC2011df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
 dec2011CrimeDatesResults = vector(mode="numeric", length=0)
-
-# populates vector with number of offences that occur each day
 for (i in 1:length(dec2011Vec)) {
+  counter = 0
   for (j in 1:length(dec2011CrimeDates)) {
-    counter = 0
     if(dec2011Vec[i] == dec2011CrimeDates[j]){
       counter = counter + 1
       dec2011CrimeDatesResults[i] = (counter)
@@ -120,21 +148,7 @@ for (i in 1:length(dec2011Vec)) {
 }
 dec2011CrimeDatesResults[is.na(dec2011CrimeDatesResults)] = 0
 
-nov2011Vec = (seq(as.Date("2011-11-01"), as.Date("2011-11-30"), by="+1 day"))
-nov2011CrimeDates <- format(as.POSIXct(strptime(NOV2011df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
-nov2011CrimeDatesResults = vector(mode="numeric", length=0)
 
-# populates vector with number of offences that occur each day
-for (i in 1:length(nov2011Vec)) {
-  for (j in 1:length(nov2011CrimeDates)) {
-    counter = 0
-    if(nov2011Vec[i] == nov2011CrimeDates[j]){
-      counter = counter + 1
-      nov2011CrimeDatesResults[i] = (counter)
-    }
-  }
-}
-nov2011CrimeDatesResults[is.na(nov2011CrimeDatesResults)] = 0
 
 t.test(nov2011CrimeDatesResults,dec2011CrimeDatesResults)
 
