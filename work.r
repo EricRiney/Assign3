@@ -349,7 +349,6 @@ for (i in 1:length(dec2012Vec)) {
 
 
 
-
 t.test(nov2011CrimeDatesResults,dec2011CrimeDatesResults)
 
 totalCrimes = sum(complete.cases(crime$Month))
