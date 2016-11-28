@@ -595,16 +595,16 @@ for (i in 1:length(may2014Vec)) {
   }
 }
 
-# jun 2013 Crime data
-jun2013Vec = (seq(as.Date("2013-06-01"), as.Date("2013-06-30"), by="+1 day"))
-jun2013CrimeDates <- format(as.POSIXct(strptime(JUN2013df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
-jun2013CrimeDatesResults = vector(mode="numeric", length=length(jun2013Vec))
-for (i in 1:length(jun2013Vec)) {
+# jun 2014 Crime data
+jun2014Vec = (seq(as.Date("2014-06-01"), as.Date("2014-06-30"), by="+1 day"))
+jun2014CrimeDates <- format(as.POSIXct(strptime(JUN2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+jun2014CrimeDatesResults = vector(mode="numeric", length=length(jun2014Vec))
+for (i in 1:length(jun2014Vec)) {
   counter = 0
-  for (j in 1:length(jun2013CrimeDates)) {
-    if(jun2013Vec[i] == jun2013CrimeDates[j]){
+  for (j in 1:length(jun2014CrimeDates)) {
+    if(jun2014Vec[i] == jun2014CrimeDates[j]){
       counter = counter + 1
-      jun2013CrimeDatesResults[i] = (counter)
+      jun2014CrimeDatesResults[i] = (counter)
     }
   }
 }
@@ -623,77 +623,247 @@ for (i in 1:length(jly2013Vec)) {
   }
 }
 
-# aug 2013 Crime data
-aug2013Vec = (seq(as.Date("2013-8-01"), as.Date("2013-8-31"), by="+1 day"))
-aug2013CrimeDates <- format(as.POSIXct(strptime(AUG2013df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
-aug2013CrimeDatesResults = vector(mode="numeric", length=length(aug2013Vec))
-for (i in 1:length(aug2013Vec)) {
+# aug 2014 Crime data
+aug2014Vec = (seq(as.Date("2014-8-01"), as.Date("2014-8-31"), by="+1 day"))
+aug2014CrimeDates <- format(as.POSIXct(strptime(AUG2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+aug2014CrimeDatesResults = vector(mode="numeric", length=length(aug2014Vec))
+for (i in 1:length(aug2014Vec)) {
   counter = 0
-  for (j in 1:length(aug2013CrimeDates)) {
-    if(aug2013Vec[i] == aug2013CrimeDates[j]){
+  for (j in 1:length(aug2014CrimeDates)) {
+    if(aug2014Vec[i] == aug2014CrimeDates[j]){
       counter = counter + 1
-      aug2013CrimeDatesResults[i] = (counter)
+      aug2014CrimeDatesResults[i] = (counter)
     }
   }
 }
 
-# sep 2013 Crime data
-sep2013Vec = (seq(as.Date("2013-9-01"), as.Date("2013-9-30"), by="+1 day"))
-sep2013CrimeDates <- format(as.POSIXct(strptime(SEP2013df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
-sep2013CrimeDatesResults = vector(mode="numeric", length=length(sep2013Vec))
-for (i in 1:length(sep2013Vec)) {
+# sep 2014 Crime data
+sep2014Vec = (seq(as.Date("2014-9-01"), as.Date("2014-9-30"), by="+1 day"))
+sep2014CrimeDates <- format(as.POSIXct(strptime(SEP2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+sep2014CrimeDatesResults = vector(mode="numeric", length=length(sep2014Vec))
+for (i in 1:length(sep2014Vec)) {
   counter = 0
-  for (j in 1:length(sep2013CrimeDates)) {
-    if(sep2013Vec[i] == sep2013CrimeDates[j]){
+  for (j in 1:length(sep2014CrimeDates)) {
+    if(sep2014Vec[i] == sep2014CrimeDates[j]){
       counter = counter + 1
-      sep2013CrimeDatesResults[i] = (counter)
+      sep2014CrimeDatesResults[i] = (counter)
     }
   }
 }
 
-# oct 2013 Crime data
-oct2013Vec = (seq(as.Date("2013-10-01"), as.Date("2013-10-31"), by="+1 day"))
-oct2013CrimeDates <- format(as.POSIXct(strptime(OCT2013df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
-oct2013CrimeDatesResults = vector(mode="numeric", length=length(oct2012Vec))
-for (i in 1:length(oct2013Vec)) {
+# oct 2014 Crime data
+oct2014Vec = (seq(as.Date("2014-10-01"), as.Date("2014-10-31"), by="+1 day"))
+oct2014CrimeDates <- format(as.POSIXct(strptime(OCT2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+oct2014CrimeDatesResults = vector(mode="numeric", length=length(oct2014Vec))
+for (i in 1:length(oct2014Vec)) {
   counter = 0
-  for (j in 1:length(oct2013CrimeDates)) {
-    if(oct2013Vec[i] == oct2013CrimeDates[j]){
+  for (j in 1:length(oct2014CrimeDates)) {
+    if(oct2014Vec[i] == oct2014CrimeDates[j]){
       counter = counter + 1
-      oct2013CrimeDatesResults[i] = (counter)
+      oct2014CrimeDatesResults[i] = (counter)
     }
   }
 }
 
-# nov 2013 Crime data
-nov2013Vec = (seq(as.Date("2013-11-01"), as.Date("2013-11-30"), by="+1 day"))
-nov2013CrimeDates <- format(as.POSIXct(strptime(NOV2013df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
-nov2013CrimeDatesResults = vector(mode="numeric", length=length(nov2013Vec))
-for (i in 1:length(nov2013Vec)) {
+# nov 2014 Crime data
+nov2014Vec = (seq(as.Date("2014-11-01"), as.Date("2014-11-30"), by="+1 day"))
+nov2014CrimeDates <- format(as.POSIXct(strptime(NOV2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+nov2014CrimeDatesResults = vector(mode="numeric", length=length(nov2014Vec))
+for (i in 1:length(nov2014Vec)) {
   counter = 0
-  for (j in 1:length(nov2013CrimeDates)) {
-    if(nov2013Vec[i] == nov2013CrimeDates[j]){
+  for (j in 1:length(nov2014CrimeDates)) {
+    if(nov2014Vec[i] == nov2014CrimeDates[j]){
       counter = counter + 1
-      nov2013CrimeDatesResults[i] = (counter)
+      nov2014CrimeDatesResults[i] = (counter)
     }
   }
 }
 
-# dec 2013 Crime data
-dec2013Vec = (seq(as.Date("2013-12-01"), as.Date("2013-12-31"), by="+1 day"))
-dec2013CrimeDates <- format(as.POSIXct(strptime(DEC2013df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
-dec2013CrimeDatesResults = vector(mode="numeric", length=length(dec2013Vec))
-for (i in 1:length(dec2013Vec)) {
+# dec 2014 Crime data
+dec2014Vec = (seq(as.Date("2014-12-01"), as.Date("2014-12-31"), by="+1 day"))
+dec2014CrimeDates <- format(as.POSIXct(strptime(DEC2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+dec2014CrimeDatesResults = vector(mode="numeric", length=length(dec2014Vec))
+for (i in 1:length(dec2014Vec)) {
   counter = 0
-  for (j in 1:length(dec2013CrimeDates)) {
-    if(dec2013Vec[i] == dec2013CrimeDates[j]){
+  for (j in 1:length(dec2014CrimeDates)) {
+    if(dec2014Vec[i] == dec2014CrimeDates[j]){
       counter = counter + 1
-      dec2013CrimeDatesResults[i] = (counter)
+      dec2014CrimeDatesResults[i] = (counter)
     }
   }
 }
 
+#######################
+### 2015 Crime Data ###
+#######################
 
+# jan 2015 Crime data
+jan2015Vec = (seq(as.Date("2015-01-01"), as.Date("2015-01-31"), by="+1 day"))
+jan2015CrimeDates <- format(as.POSIXct(strptime(JAN2015df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+jan2015CrimeDatesResults = vector(mode="numeric", length=length(jan2015Vec))
+for (i in 1:length(jan2015Vec)) {
+  counter = 0
+  for (j in 1:length(jan2015CrimeDates)) {
+    if(jan2015Vec[i] == jan2015CrimeDates[j]){
+      counter = counter + 1
+      jan2015CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# feb 2015 Crime data
+feb2015Vec = (seq(as.Date("2015-02-01"), as.Date("2015-02-28"), by="+1 day"))
+feb2015CrimeDates <- format(as.POSIXct(strptime(FEB2015df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+feb2015CrimeDatesResults = vector(mode="numeric", length=length(feb2015Vec))
+for (i in 1:length(feb2015Vec)) {
+  counter = 0
+  for (j in 1:length(feb2015CrimeDates)) {
+    if(feb2015Vec[i] == feb2015CrimeDates[j]){
+      counter = counter + 1
+      feb2015CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# mar 2015 Crime data
+mar2015Vec = (seq(as.Date("2015-03-01"), as.Date("2015-03-31"), by="+1 day"))
+mar2015CrimeDates <- format(as.POSIXct(strptime(MAR2015df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+mar2015CrimeDatesResults = vector(mode="numeric", length=length(mar2015Vec))
+for (i in 1:length(mar2015Vec)) {
+  counter = 0
+  for (j in 1:length(mar2015CrimeDates)) {
+    if(mar2015Vec[i] == mar2015CrimeDates[j]){
+      counter = counter + 1
+      mar2015CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# apr 2015 Crime data
+apr2015Vec = (seq(as.Date("2015-04-01"), as.Date("2015-04-30"), by="+1 day"))
+apr2015CrimeDates <- format(as.POSIXct(strptime(APR2015df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+apr2015CrimeDatesResults = vector(mode="numeric", length=length(apr2015Vec))
+for (i in 1:length(apr2015Vec)) {
+  counter = 0
+  for (j in 1:length(apr2015CrimeDates)) {
+    if(apr2015Vec[i] == apr2015CrimeDates[j]){
+      counter = counter + 1
+      apr2015CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# may 2015 Crime data
+may2015Vec = (seq(as.Date("2015-05-01"), as.Date("2015-05-31"), by="+1 day"))
+may2015CrimeDates <- format(as.POSIXct(strptime(MAY2015df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+may2015CrimeDatesResults = vector(mode="numeric", length=length(may2015Vec))
+for (i in 1:length(may2015Vec)) {
+  counter = 0
+  for (j in 1:length(may2015CrimeDates)) {
+    if(may2015Vec[i] == may2015CrimeDates[j]){
+      counter = counter + 1
+      may2015CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# jun 2014 Crime data
+jun2014Vec = (seq(as.Date("2014-06-01"), as.Date("2014-06-30"), by="+1 day"))
+jun2014CrimeDates <- format(as.POSIXct(strptime(JUN2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+jun2014CrimeDatesResults = vector(mode="numeric", length=length(jun2014Vec))
+for (i in 1:length(jun2014Vec)) {
+  counter = 0
+  for (j in 1:length(jun2014CrimeDates)) {
+    if(jun2014Vec[i] == jun2014CrimeDates[j]){
+      counter = counter + 1
+      jun2014CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# jly 2013 Crime data
+jly2013Vec = (seq(as.Date("2013-07-01"), as.Date("2013-07-31"), by="+1 day"))
+jly2013CrimeDates <- format(as.POSIXct(strptime(JLY2013df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+jly2013CrimeDatesResults = vector(mode="numeric", length=length(jly2013Vec))
+for (i in 1:length(jly2013Vec)) {
+  counter = 0
+  for (j in 1:length(jly2013CrimeDates)) {
+    if(jly2013Vec[i] == jly2013CrimeDates[j]){
+      counter = counter + 1
+      jly2013CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# aug 2014 Crime data
+aug2014Vec = (seq(as.Date("2014-8-01"), as.Date("2014-8-31"), by="+1 day"))
+aug2014CrimeDates <- format(as.POSIXct(strptime(AUG2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+aug2014CrimeDatesResults = vector(mode="numeric", length=length(aug2014Vec))
+for (i in 1:length(aug2014Vec)) {
+  counter = 0
+  for (j in 1:length(aug2014CrimeDates)) {
+    if(aug2014Vec[i] == aug2014CrimeDates[j]){
+      counter = counter + 1
+      aug2014CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# sep 2014 Crime data
+sep2014Vec = (seq(as.Date("2014-9-01"), as.Date("2014-9-30"), by="+1 day"))
+sep2014CrimeDates <- format(as.POSIXct(strptime(SEP2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+sep2014CrimeDatesResults = vector(mode="numeric", length=length(sep2014Vec))
+for (i in 1:length(sep2014Vec)) {
+  counter = 0
+  for (j in 1:length(sep2014CrimeDates)) {
+    if(sep2014Vec[i] == sep2014CrimeDates[j]){
+      counter = counter + 1
+      sep2014CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# oct 2014 Crime data
+oct2014Vec = (seq(as.Date("2014-10-01"), as.Date("2014-10-31"), by="+1 day"))
+oct2014CrimeDates <- format(as.POSIXct(strptime(OCT2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+oct2014CrimeDatesResults = vector(mode="numeric", length=length(oct2014Vec))
+for (i in 1:length(oct2014Vec)) {
+  counter = 0
+  for (j in 1:length(oct2014CrimeDates)) {
+    if(oct2014Vec[i] == oct2014CrimeDates[j]){
+      counter = counter + 1
+      oct2014CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# nov 2014 Crime data
+nov2014Vec = (seq(as.Date("2014-11-01"), as.Date("2014-11-30"), by="+1 day"))
+nov2014CrimeDates <- format(as.POSIXct(strptime(NOV2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+nov2014CrimeDatesResults = vector(mode="numeric", length=length(nov2014Vec))
+for (i in 1:length(nov2014Vec)) {
+  counter = 0
+  for (j in 1:length(nov2014CrimeDates)) {
+    if(nov2014Vec[i] == nov2014CrimeDates[j]){
+      counter = counter + 1
+      nov2014CrimeDatesResults[i] = (counter)
+    }
+  }
+}
+
+# dec 2014 Crime data
+dec2014Vec = (seq(as.Date("2014-12-01"), as.Date("2014-12-31"), by="+1 day"))
+dec2014CrimeDates <- format(as.POSIXct(strptime(DEC2014df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+dec2014CrimeDatesResults = vector(mode="numeric", length=length(dec2014Vec))
+for (i in 1:length(dec2014Vec)) {
+  counter = 0
+  for (j in 1:length(dec2014CrimeDates)) {
+    if(dec2014Vec[i] == dec2014CrimeDates[j]){
+      counter = counter + 1
+      dec2014CrimeDatesResults[i] = (counter)
+    }
+  }
+}
 
 
 
