@@ -43,6 +43,20 @@ weatherOCT2012df = weather[(weather$Month == 'Oct' & weather$Year== '2012'),]
 weatherNOV2012df = weather[(weather$Month == 'Nov' & weather$Year== '2012'),]
 weatherDEC2012df = weather[(weather$Month == 'Dec' & weather$Year== '2012'),]
 
+weather2012Vec = (seq(as.Date("2012-1-01"), as.Date("2012-12-31"), by="+1 day"))
+#weather2012CrimeDates <- format(as.POSIXct(strptime(AUG2011df$Date.Reported,"%m/%d/%Y %H:%M",tz="")) ,format = "%Y-%m-%d")
+weather2012DatesResults = vector(mode="numeric", length=length(weather2012Vec))
+for (i in 1:length(weather2012Vec)) {
+  counter = 0
+  for (j in 1:length(weather2012DatesResults)) {
+    if(weather2012$Precip...in.[i] != 0){
+      counter = counter + 1
+      weather2012DatesResults[i] = 1
+    }
+  }
+}
+
+
 ###############################
 ### 2013 Weather Dataframes ###
 ###############################
