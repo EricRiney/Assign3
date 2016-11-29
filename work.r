@@ -17,6 +17,11 @@ summary(crime)
 
 hist(weather$AvgTemp....F.)
 
+#############################
+### 2011 Crime Dataframes ###
+#############################
+
+crime2011df = crime[crime$Year == '2011',]
 # Monthly Crime Dataframes for 2011
 AUG2011df = crime[(crime$Month == '8' & crime$Year== '2011'),]
 SEP2011df = crime[(crime$Month == "9" & crime$Year == "2011"),]
@@ -24,6 +29,11 @@ OCT2011df = crime[(crime$Month == "10" & crime$Year == "2011"),]
 NOV2011df = crime[(crime$Month == "11" & crime$Year == "2011"),]
 DEC2011df = crime[(crime$Month == "12" & crime$Year == "2011"),]
 
+#############################
+### 2012 Crime Dataframes ###
+#############################
+
+crime2012df = crime[crime$Year == '2012',]
 # Monthly Crime Dataframes for 2012
 JAN2012df = crime[(crime$Month == "1" & crime$Year == "2012"),]
 FEB2012df = crime[(crime$Month == "2" & crime$Year == "2012"),]
@@ -38,6 +48,11 @@ OCT2012df = crime[(crime$Month == "10" & crime$Year == "2012"),]
 NOV2012df = crime[(crime$Month == "11" & crime$Year == "2012"),]
 DEC2012df = crime[(crime$Month == "12" & crime$Year == "2012"),]
 
+#############################
+### 2013 Crime Dataframes ###
+#############################
+
+crime2013df = crime[crime$Year == '2013',]
 # Monthly Crime Dataframes for 2013
 JAN2013df = crime[(crime$Month == "1" & crime$Year == "2013"),]
 FEB2013df = crime[(crime$Month == "2" & crime$Year == "2013"),]
@@ -52,6 +67,11 @@ OCT2013df = crime[(crime$Month == "10" & crime$Year == "2013"),]
 NOV2013df = crime[(crime$Month == "11" & crime$Year == "2013"),]
 DEC2013df = crime[(crime$Month == "12" & crime$Year == "2013"),]
 
+#############################
+### 2014 Crime Dataframes ###
+#############################
+
+crime2014df = crime[crime$Year == '2014',]
 # Monthly Crime Dataframes for 2014
 JAN2014df = crime[(crime$Month == "1" & crime$Year == "2014"),]
 FEB2014df = crime[(crime$Month == "2" & crime$Year == "2014"),]
@@ -66,6 +86,11 @@ OCT2014df = crime[(crime$Month == "10" & crime$Year == "2014"),]
 NOV2014df = crime[(crime$Month == "11" & crime$Year == "2014"),]
 DEC2014df = crime[(crime$Month == "12" & crime$Year == "2014"),]
 
+#############################
+### 2015 Crime Dataframes ###
+#############################
+
+crime2015df = crime[crime$Year == '2015',]
 # Monthly Crime Dataframes for 2015
 JAN2015df = crime[(crime$Month == "1" & crime$Year == "2015"),]
 FEB2015df = crime[(crime$Month == "2" & crime$Year == "2015"),]
@@ -80,6 +105,11 @@ OCT2015df = crime[(crime$Month == "10" & crime$Year == "2015"),]
 NOV2015df = crime[(crime$Month == "11" & crime$Year == "2015"),]
 DEC2015df = crime[(crime$Month == "12" & crime$Year == "2015"),]
 
+#############################
+### 2016 Crime Dataframes ###
+#############################
+
+crime2016df = crime[crime$Year == '2016',]
 # Monthly Crime Dataframes for 2016
 JAN2016df = crime[(crime$Month == "1" & crime$Year == "2016"),]
 FEB2016df = crime[(crime$Month == "2" & crime$Year == "2016"),]
