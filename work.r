@@ -51,21 +51,6 @@ OCT2012df = crime[(crime$Month == "10" & crime$Year == "2012"),]
 NOV2012df = crime[(crime$Month == "11" & crime$Year == "2012"),]
 DEC2012df = crime[(crime$Month == "12" & crime$Year == "2012"),]
 
-
-burglaryCrime2012Vec = (seq(as.Date("2012-1-01"), as.Date("2012-12-31"), by="+1 day"))
-burglaryCrime2012Results = vector(mode="numeric", length=length(burglaryCrime2012Vec))
-for (i in 1:length(burglaryCrime2012Vec)) {
-  #counter = 0
-  #for (j in 1:length(burglaryCrime2012Vec)) {
-    if(crime$Summarized.Offense.Description[i] == 'BURGLARY'){
-      #counter = counter + 1
-      burglaryCrime2012Results[i] = 1
-   # }
-  }
-}
-
-boxplot(weather2012DatesResults, burglaryCrime2012Results)
-
 #############################
 ### 2013 Crime Dataframes ###
 #############################
