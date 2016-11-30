@@ -57,7 +57,7 @@ for (i in 1:length(weather2012Vec)) {
 }
 
 weatherClum2012DatesResults = weather[weather$Year == '2012',]
-
+weatherClum2012DatesResults[weatherClum2012DatesResults == 'T'] <- 0.2
 
 ###############################
 ### 2013 Weather Dataframes ###
