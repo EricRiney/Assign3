@@ -24,7 +24,7 @@ hist(weather$AvgTemp....F.)
 ### 2011 Crime Dataframes ###
 #############################
 
-crime2011df = crime[crime$Year == '2011',]
+crime2011df = crime[crime$Year == '2012',]
 # Monthly Crime Dataframes for 2011
 AUG2011df = crime[(crime$Month == '8' & crime$Year== '2011'),]
 SEP2011df = crime[(crime$Month == "9" & crime$Year == "2011"),]
