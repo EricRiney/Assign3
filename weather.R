@@ -56,20 +56,8 @@ for (i in 1:length(weather2012Vec)) {
   }
 }
 
-weatherClum2012DatesResults = vector(mode="numeric", length=length(weather2012Vec))
-for (i in 1:length(weather2012Vec)) {
-  counter = 0.00000000000000000001
-  for (j in 1:length(weather2012DatesResults)) {
-    if(weather2012$Precip...in.[i] != 0){
-      counter = counter + (weather2012$Precip...in.[i])
-    }
-    weatherClum2012DatesResults[i] = (counter)
-  }
-}
-weatherClum2012DatesResults = weather[(weather$Precip...in. & weather$Year == '2012'),]
+weatherClum2012DatesResults = weather[weather$Year == '2012',]
 
-
-test = weather$Precip...in.
 
 ###############################
 ### 2013 Weather Dataframes ###
