@@ -64,3 +64,55 @@ for (i in 1:length(vehicleTheftCrime2012Vec)) {
 }
 summary(vehicleTheftCrime2012Results)
 cor(weather2012DatesResults,vehicleTheftCrime2012Results)
+
+### 2012 robbery Crime info ###
+robberyCrime2012Vec = (seq(as.Date("2012-1-01"), as.Date("2012-12-31"), by="+1 day"))
+robberyCrime2012Results = vector(mode="numeric", length=length(robberyCrime2012Vec))
+for (i in 1:length(robberyCrime2012Vec)) {
+  counter = 0
+  if(crime$Summarized.Offense.Description[i] == 'ROBBERY'){
+    counter = counter + 1
+  }
+  robberyCrime2012Results[i] = counter
+}
+summary(robberyCrime2012Results)
+cor(weather2012DatesResults,robberyCrime2012Results)
+
+### 2012 assault Crime info ###
+assaultCrime2012Vec = (seq(as.Date("2012-1-01"), as.Date("2012-12-31"), by="+1 day"))
+assaultCrime2012Results = vector(mode="numeric", length=length(assaultCrime2012Vec))
+for (i in 1:length(assaultCrime2012Vec)) {
+  counter = 0
+  if(crime$Summarized.Offense.Description[i] == 'ASSAULT'){
+    counter = counter + 1
+  }
+  assaultCrime2012Results[i] = counter
+}
+summary(assaultCrime2012Results)
+cor(weather2012DatesResults, assaultCrime2012Results)
+
+### 2012 threats Crime info ###
+threatsCrime2012Vec = (seq(as.Date("2012-1-01"), as.Date("2012-12-31"), by="+1 day"))
+threatsCrime2012Results = vector(mode="numeric", length=length(threatsCrime2012Vec))
+for (i in 1:length(threatsCrime2012Vec)) {
+  counter = 0
+  if(crime$Summarized.Offense.Description[i] == 'THREATS'){
+    counter = counter + 1
+  }
+  threatsCrime2012Results[i] = counter
+}
+summary(threatsCrime2012Results)
+cor(weather2012DatesResults,robberyCrime2012Results)
+
+### 2012 weapons Crime info ###
+weaponsCrime2012Vec = (seq(as.Date("2012-1-01"), as.Date("2012-12-31"), by="+1 day"))
+weaponsCrime2012Results = vector(mode="numeric", length=length(weaponsCrime2012Vec))
+for (i in 1:length(weaponsCrime2012Vec)) {
+  counter = 0
+  if(crime$Summarized.Offense.Description[i] == 'WEAPON'){
+    counter = counter + 1
+  }
+  weaponsCrime2012Results[i] = counter
+}
+summary(weaponsCrime2012Results)
+cor(weather2012DatesResults,weaponsCrime2012Results)
