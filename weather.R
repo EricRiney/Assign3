@@ -50,9 +50,9 @@ for (i in 1:length(weather2012Vec)) {
   counter = 0
   for (j in 1:length(weather2012DatesResults)) {
     if(weather2012$Precip...in.[i] != 0){
-      counter = counter + 1
-      weather2012DatesResults[i] = 1
+      counter = 1
     }
+    weather2012DatesResults[i] = (counter)
   }
 }
 
