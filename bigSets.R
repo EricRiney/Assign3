@@ -22,7 +22,9 @@ for (i in 1:nrow(weatherAll)) {
   }
 #}
 
-crimeAllBURGLARY = crime[(crime$Summarized.Offense.Description == 'BURGLARY' || 
+weatherClum2012DatesResults[weatherClum2012DatesResults == 'T'] <- 0.2
+
+crimeAllBURGLARY = crime[(#crime$Summarized.Offense.Description == 'BURGLARY' || 
                             crime$Year == '2012' || 
                             crime$Year == '2013' || 
                             crime$Year == '2014' || 
