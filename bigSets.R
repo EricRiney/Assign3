@@ -7,13 +7,18 @@ weather = read.csv(file.choose(), header = TRUE)
 crime = read.csv(file.choose(), header = TRUE)
 
 weatherAll = weather[(weather$Year == '2015'),]
-grainWeatherAllResults = data.frame((paste(match(weatherAll$Month,month.abb), weatherAllResults$Date,sep="-")))
+grainWeatherAllResults = data.frame((paste(match(weatherAll$Month,month.abb), weatherAll$Date,sep="-")))
 
+weatherAll$Month = match(weatherAll$Month,month.abb)
+test = paste(weatherAll$Month,weatherAll$Date,sep = "-")
+weatherAll$Date = test
 
 weatherAll$Date = grainWeatherAllResults
 crimeAllBURGLARY = crime[(crime$Summarized.Offense.Description == 'BURGLARY' &  crime$Year == '2015'),]
-grainCrimeAllBURGLARY = format(as.POSIXct(strptime(crimeAllBURGLARY$Date.Reported,
-                                                   "%m/%d/%Y %H:%M",tz="")) ,format = "%m-%d")
+grainCrimeAllBURGLARY = data.frame(format(as.POSIXct(strptime(crimeAllBURGLARY$Date.Reported,
+                                                   "%m/%d/%Y %H:%M",tz="")) ,format = "%m-%d"))
+crimeAllBURGLARY$Date = grainCrimeAllBURGLARY
+
 
 year = vector(mode="numeric", length=365)
 
