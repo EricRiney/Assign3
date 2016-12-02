@@ -39,7 +39,7 @@ crimeAllBURGLARY$Date = paste(crimeAllBURGLARY$Month, crimeAllBURGLARY$Day, sep 
 
 mergedSet = merge(x = weatherAll, y = crimeAllBURGLARY, by.x = 'Date', by.y = 'Date', all = T)
 
-nrow(crimeAllBURGLARY$Date == '01-01')
+length(which(weatherAll$Date == '01-01'))
 length(which(crimeAllBURGLARY$Date == '01-01'))
 
 #length(crimeAllBURGLARYResults)
