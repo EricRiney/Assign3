@@ -35,7 +35,6 @@ crime$Month = formatC(month(crimeDate), width = 2, format = "d", flag = "0")
 crime$Day = formatC(day(crimeDate), width = 2, format = "d", flag = "0")
 
 crimeAllBURGLARY = crime[(crime$Event.Clearance.Group == 'BURGLARY' &  crime$Year == '2015'),]
-
 crimeAllBURGLARY$Date = paste(crimeAllBURGLARY$Month, crimeAllBURGLARY$Day, sep = '-')
 
 mergedSet = merge(x = weatherAll, y = crimeAllBURGLARY, by.x = 'Date', by.y = 'Date', all = T)
@@ -49,6 +48,8 @@ correlationFrameAgg$count = as.numeric(correlationFrameAgg$count)
 
 summary(lm(log(count) ~ precip, data = correlationFrameAgg))
 cor.test(x = correlationFrameAgg$precip, y = log(correlationFrameAgg$count))
+
+dev.off()
 
 ggplot(correlationFrameAgg, aes(x = precip, y = log(count))) +
   xlab('# of Burglaries') +
