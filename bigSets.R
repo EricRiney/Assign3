@@ -3,6 +3,7 @@
 
 require(zoo)
 library(lubridate)
+library(ggplot2)
 
 weather = read.csv(file.choose(), header = TRUE)
 crime = read.csv(file.choose(), header = TRUE)
@@ -38,6 +39,13 @@ crimeAllBURGLARY = crime[(crime$Event.Clearance.Group == 'BURGLARY' &  crime$Yea
 crimeAllBURGLARY$Date = paste(crimeAllBURGLARY$Month, crimeAllBURGLARY$Day, sep = '-')
 
 mergedSet = merge(x = weatherAll, y = crimeAllBURGLARY, by.x = 'Date', by.y = 'Date', all = T)
+
+correlationFrame = data.frame(table(mergedSet$Date)[1:(length(table(mergedSet$Date)) - 1)], weatherAll$Precip...in.)
+names(correlationFrame) = c('date', 'count', 'precip')
+
+ggplot(correlationFrame, aes(x = 'precip', y = 'count')) +
+  geom_point(shape=1) +    # Use hollow circles
+  geom_smooth(method=lm)
 
 #year = vector(mode="numeric", length=365)
 
