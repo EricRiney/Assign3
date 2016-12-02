@@ -43,8 +43,17 @@ mergedSet = merge(x = weatherAll, y = crimeAllBURGLARY, by.x = 'Date', by.y = 'D
 correlationFrame = data.frame(table(mergedSet$Date)[1:(length(table(mergedSet$Date)) - 1)], weatherAll$Precip...in.)
 names(correlationFrame) = c('date', 'count', 'precip')
 
-ggplot(correlationFrame, aes(x = 'precip', y = 'count')) +
-  geom_point(shape=1) +    # Use hollow circles
+correlationFrameAgg = aggregate(. ~  precip, data = correlationFrame, sum)
+correlationFrameAgg$precip = as.numeric(correlationFrameAgg$precip)
+correlationFrameAgg$count = as.numeric(correlationFrameAgg$count)
+
+summary(lm(log(count) ~ precip, data = correlationFrameAgg))
+cor.test(x = correlationFrameAgg$precip, y = log(correlationFrameAgg$count))
+
+ggplot(correlationFrameAgg, aes(x = precip, y = log(count))) +
+  xlab('# of Burglaries') +
+  ylab('Amount of Precipitation in inches') +
+  geom_point(shape=1) +
   geom_smooth(method=lm)
 
 #year = vector(mode="numeric", length=365)
