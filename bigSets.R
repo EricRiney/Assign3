@@ -39,10 +39,8 @@ crimeAllBURGLARY$Date = paste(crimeAllBURGLARY$Month, crimeAllBURGLARY$Day, sep 
 
 mergedSet = merge(x = weatherAll, y = crimeAllBURGLARY, by.x = 'Date', by.y = 'Date', all = T)
 
-#year = vector(mode="numeric", length=365)
-
-
-#cor(crimeAllBURGLARYResults,weatherAllResults)
+nrow(crimeAllBURGLARY$Date == '01-01')
+length(which(crimeAllBURGLARY$Date == '01-01'))
 
 #length(crimeAllBURGLARYResults)
 #length(weatherAllResults)
