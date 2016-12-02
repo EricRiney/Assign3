@@ -8,7 +8,10 @@ crime = read.csv(file.choose(), header = TRUE)
 
 weatherAll = weather[(weather$Year == '2015'),]
 # grainWeatherAllResults = data.frame((paste(match(weatherAll$Month,month.abb), weatherAll$Date,sep="-")))
-weatherAll$Month = match(weatherAll$Month,month.abb)
+# weatherAll$Month = match(weatherAll$Month,month.abb)
+WeatherAllBURGLARYDate = data.frame(format(as.POSIXct(strptime(weatherAll$Full.Date,
+                                                              "%d-%(match(weatherAll$Month,month.abb)-%Y",tz="")) ,format = "%m-%d"))
+
 test = paste(weatherAll$Month,weatherAll$Date,sep = "-")
 weatherAll$Date = test
 
