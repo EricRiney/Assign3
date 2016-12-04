@@ -47,11 +47,11 @@ getCorrelation = function(crimeName, crimeYear) {
   correlationFrameAgg$precip = as.numeric(correlationFrameAgg$precip)
   correlationFrameAgg$count = as.numeric(correlationFrameAgg$count)
   
-  summary(lm(log(count) ~ precip, data = correlationFrameAgg))
-  cor.test(x = correlationFrameAgg$precip, y = log(correlationFrameAgg$count))
+  print(summary(lm(log(count) ~ precip, data = correlationFrameAgg)))
+  print(cor.test(x = correlationFrameAgg$precip, y = log(correlationFrameAgg$count)))
   
   ggplot(correlationFrameAgg, aes(x = precip, y = log(count))) +
-    ylab(paste('Count of', crimeName, sep = ' ')) +
+    ylab(paste('Log() of Count of', crimeName, sep = ' ')) +
     xlab('Amount of Precipitation in inches') +
     geom_point(shape=1) +
     geom_smooth(method=lm)
