@@ -80,8 +80,8 @@ getCorrelation('THREATS, HARASSMENT', '2015')
 getCorrelation('PERSON DOWN/INJURY', '2015')
 getCorrelation('AUTO THEFTS', '2015')
 getCorrelation('PERSONS - LOST, FOUND, MISSING', '2015')
-
-getCorrelation('PERSONS - LOST, FOUND, MISSING', '2015')
+getCorrelation('FALSE ALARMS', '2015')
+getCorrelation('ROBBERY', '2015')
 
 
 
