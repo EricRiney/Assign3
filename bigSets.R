@@ -82,6 +82,72 @@ getCorrelation('AUTO THEFTS', '2015')
 getCorrelation('PERSONS - LOST, FOUND, MISSING', '2015')
 getCorrelation('FALSE ALARMS', '2015')
 getCorrelation('ROBBERY', '2015')
+getCorrelation('ARREST', '2015')
+getCorrelation('FALSE ALACAD', '2015') #!!! 
+getCorrelation('RECKLESS BURNING', '2015') #!!!
+getCorrelation('BEHAVIORAL HEALTH', '2015') #!!!
+getCorrelation('', '2015') #!!!
 
 
+getCorrelation('BURGLARY', '2014')
+getCorrelation('TRESPASS', '2014')
+getCorrelation('DISTURBANCES', '2014')
+getCorrelation('OTHER PROPERTY', '2014')
+getCorrelation('NUISANCE, MISCHIEF', '2014')
+getCorrelation('TRAFFIC RELATED CALLS', '2014')
+getCorrelation('SUSPICIOUS CIRCUMSTANCES', '2014')
+getCorrelation('MENTAL HEALTH', '2014') 
+getCorrelation('LIQUOR VIOLATIONS', '2014')
+getCorrelation('ASSAULTS', '2014')
+getCorrelation('NARCOTICS COMPLAINTS', '2014')
+getCorrelation('ACCIDENT INVESTIGATION', '2014')
+getCorrelation('SHOPLIFTING', '2014')
+getCorrelation('PROWLER', '2014')
+getCorrelation('HAZARDS', '2014')
+getCorrelation('BIKE', '2014') #!!! 
+getCorrelation('PROSTITUTION', '2014')
+getCorrelation('MISCELLANEOUS MISDEMEANORS', '2014')
+getCorrelation('ANIMAL COMPLAINTS', '2014')
+getCorrelation('THREATS, HARASSMENT', '2014')
+getCorrelation('PERSON DOWN/INJURY', '2014')
+getCorrelation('AUTO THEFTS', '2014')
+getCorrelation('PERSONS - LOST, FOUND, MISSING', '2014')
+getCorrelation('FALSE ALARMS', '2014')
+getCorrelation('ROBBERY', '2014')
+getCorrelation('ARREST', '2014')
+getCorrelation('FALSE ALACAD', '2014') #!!! 
+getCorrelation('RECKLESS BURNING', '2014') #!!!
+getCorrelation('BEHAVIORAL HEALTH', '2014') #!!!
+getCorrelation('', '2014') #!!!
+
+getCorrelation('BURGLARY', '2014')
+getCorrelation('TRESPASS', '2014')
+getCorrelation('DISTURBANCES', '2014')
+getCorrelation('OTHER PROPERTY', '2014')
+getCorrelation('NUISANCE, MISCHIEF', '2014')
+getCorrelation('TRAFFIC RELATED CALLS', '2014')
+getCorrelation('SUSPICIOUS CIRCUMSTANCES', '2014')
+getCorrelation('MENTAL HEALTH', '2014') 
+getCorrelation('LIQUOR VIOLATIONS', '2014')
+getCorrelation('ASSAULTS', '2014')
+getCorrelation('NARCOTICS COMPLAINTS', '2014')
+getCorrelation('ACCIDENT INVESTIGATION', '2014')
+getCorrelation('SHOPLIFTING', '2014')
+getCorrelation('PROWLER', '2014')
+getCorrelation('HAZARDS', '2014')
+getCorrelation('BIKE', '2014') #!!! 
+getCorrelation('PROSTITUTION', '2014')
+getCorrelation('MISCELLANEOUS MISDEMEANORS', '2014')
+getCorrelation('ANIMAL COMPLAINTS', '2014')
+getCorrelation('THREATS, HARASSMENT', '2014')
+getCorrelation('PERSON DOWN/INJURY', '2014')
+getCorrelation('AUTO THEFTS', '2014')
+getCorrelation('PERSONS - LOST, FOUND, MISSING', '2014')
+getCorrelation('FALSE ALARMS', '2014')
+getCorrelation('ROBBERY', '2014')
+getCorrelation('ARREST', '2014')
+getCorrelation('FALSE ALACAD', '2014') #!!! 
+getCorrelation('RECKLESS BURNING', '2014') #!!!
+getCorrelation('BEHAVIORAL HEALTH', '2014') #!!!
+getCorrelation('', '2014') #!!!
 
