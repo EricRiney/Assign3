@@ -75,9 +75,13 @@ getCorrelation('HAZARDS', '2015')
 getCorrelation('BIKE', '2015') #!!! 
 getCorrelation('PROSTITUTION', '2015')
 getCorrelation('MISCELLANEOUS MISDEMEANORS', '2015')
+getCorrelation('ANIMAL COMPLAINTS', '2015')
+getCorrelation('THREATS, HARASSMENT', '2015')
+getCorrelation('PERSON DOWN/INJURY', '2015')
+getCorrelation('AUTO THEFTS', '2015')
+getCorrelation('PERSONS - LOST, FOUND, MISSING', '2015')
 
-
-
+getCorrelation('PERSONS - LOST, FOUND, MISSING', '2015')
 
 
 
