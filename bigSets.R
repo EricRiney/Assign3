@@ -44,7 +44,7 @@ getCorrelation = function(crimeName, crimeYear) {
   names(correlationFrame) = c('date', 'count', 'precip')
   
   correlationFrameAgg = aggregate(. ~  precip, data = correlationFrame, sum)
-  correlationFrameAgg$precip = as.numeric(correlationFrameAgg$precip)
+  correlationFrameAgg$precip = (as.numeric(correlationFrameAgg$precip) - 1) / 100
   correlationFrameAgg$count = as.numeric(correlationFrameAgg$count)
   
   print(summary(lm(log(count) ~ precip, data = correlationFrameAgg)))
@@ -150,4 +150,3 @@ getCorrelation('FALSE ALACAD', '2014') #!!!
 getCorrelation('RECKLESS BURNING', '2014') #!!!
 getCorrelation('BEHAVIORAL HEALTH', '2014') #!!!
 getCorrelation('', '2014') #!!!
-
