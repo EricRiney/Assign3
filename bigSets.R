@@ -120,13 +120,13 @@ getCorrelation('RECKLESS BURNING', '2014') #!!!
 getCorrelation('BEHAVIORAL HEALTH', '2014') #!!!
 getCorrelation('', '2014') #!!!
 
-getCorrelation('BURGLARY', '2014')
-getCorrelation('TRESPASS', '2014')
-getCorrelation('DISTURBANCES', '2014')
-getCorrelation('OTHER PROPERTY', '2014')
-getCorrelation('NUISANCE, MISCHIEF', '2014')
-getCorrelation('TRAFFIC RELATED CALLS', '2014')
-getCorrelation('SUSPICIOUS CIRCUMSTANCES', '2014')
+getCorrelation('BURGLARY', '2013')
+getCorrelation('TRESPASS', '2013')
+getCorrelation('DISTURBANCES', '2013')
+getCorrelation('OTHER PROPERTY', '2013')
+getCorrelation('NUISANCE, MISCHIEF', '2013')
+getCorrelation('TRAFFIC RELATED CALLS', '2013')
+getCorrelation('SUSPICIOUS CIRCUMSTANCES', '2013')
 getCorrelation('MENTAL HEALTH', '2014') 
 getCorrelation('LIQUOR VIOLATIONS', '2014')
 getCorrelation('ASSAULTS', '2014')
