@@ -64,7 +64,17 @@ getCorrelation('OTHER PROPERTY', '2015')
 getCorrelation('NUISANCE, MISCHIEF', '2015')
 getCorrelation('TRAFFIC RELATED CALLS', '2015')
 getCorrelation('SUSPICIOUS CIRCUMSTANCES', '2015')
-
+getCorrelation('MENTAL HEALTH', '2015') 
+getCorrelation('LIQUOR VIOLATIONS', '2015')
+getCorrelation('ASSAULTS', '2015')
+getCorrelation('NARCOTICS COMPLAINTS', '2015')
+getCorrelation('ACCIDENT INVESTIGATION', '2015')
+getCorrelation('SHOPLIFTING', '2015')
+getCorrelation('PROWLER', '2015')
+getCorrelation('HAZARDS', '2015')
+getCorrelation('BIKE', '2015') #!!! 
+getCorrelation('PROSTITUTION', '2015')
+getCorrelation('MISCELLANEOUS MISDEMEANORS', '2015')
 
 
 
