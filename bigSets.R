@@ -25,10 +25,13 @@ makeDataframe = function(startDay, endDay, startMonth, endMonth, startYear, endY
 }
 
 weatherAll = weather[(weather$Year == '2015'),]
+weatherAll = weather
 
+weatherAll$Day = weatherAll$Date
 weatherAll$Month = formatC(weatherAll$Month, width = 2, format = "d", flag = "0")
 weatherAll$Date = formatC(weatherAll$Date, width = 2, format = "d", flag = "0")
 weatherAll$Date = paste(weatherAll$Month, weatherAll$Date, sep = '-')
+weatherAll$Date = paste(weatherAll$Year, weatherAll$Date, sep = '-')
 
 crime$Year = year(crimeDate)
 crime$Month = formatC(month(crimeDate), width = 2, format = "d", flag = "0")
@@ -40,7 +43,7 @@ getCorrelation = function(crimeName, crimeYear) {
   
   mergedSet = merge(x = weatherAll, y = crimeAllBURGLARY, by.x = 'Date', by.y = 'Date', all = T)
   
-  correlationFrame = data.frame(table(mergedSet$Date)[1:(length(table(mergedSet$Date)) - 1)], weatherAll$Precip...in.)
+  correlationFrame = data.frame(table(mergedSet$Date)[1:365], weatherAll$Precip...in.)
   names(correlationFrame) = c('date', 'count', 'precip')
   
   correlationFrameAgg = aggregate(. ~  precip, data = correlationFrame, sum)
@@ -151,3 +154,26 @@ getCorrelation('FALSE ALACAD', '2014') #!!!
 getCorrelation('RECKLESS BURNING', '2014') #!!!
 getCorrelation('BEHAVIORAL HEALTH', '2014') #!!!
 getCorrelation('', '2014') #!!!
+
+getCorrelation('DISTURBANCES', '2015')
+
+crime$Date = paste(crime$Month, crime$Day, sep = '-')
+crime$Date = paste(crime$Year, crime$Date, sep = '-')
+mergedSet = merge(x = weatherAll, y = crime, by.x = 'Date', by.y = 'Date', all = T)
+
+crimeCountDate = table(mergedSet$Date[which(mergedSet$Date != 'NA-NA-NA')])
+crimeCountDate = crimeCountDate[563:length(crimeCountDate)]
+crimeCountDate = data.frame(crimeCountDate)
+names(crimeCountDate) = c('Date', 'count')
+precipDate = data.frame(weatherAll$Date, weatherAll$Precip...in.)
+names(precipDate) = c('Date', 'precip')
+precipDate$precip = (as.numeric(precipDate$precip) - 1) / 100
+precipCrimeMerged = merge(crimeCountDate, precipDate, by = 'Date', all = F)
+noRain = precipCrimeMerged[which(precipCrimeMerged$precip == 0), 'count']
+rain = precipCrimeMerged[which(precipCrimeMerged$precip != 0), 'count']
+boxplotData = lapply(c('noRain', 'rain'), get, envir = environment())
+names(boxplotData) = c('No Rain', 'Rain')
+
+t.test(noRain, rain)
+
+boxplot(boxplotData)
