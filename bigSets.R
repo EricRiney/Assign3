@@ -63,6 +63,7 @@ getCorrelation = function(crimeName, crimeYear) {
 getCorrelation('BURGLARY', '2015')
 getCorrelation('TRESPASS', '2015')
 getCorrelation('DISTURBANCES', '2015')
+
 getCorrelation('OTHER PROPERTY', '2015')
 getCorrelation('NUISANCE, MISCHIEF', '2015')
 getCorrelation('TRAFFIC RELATED CALLS', '2015')
