@@ -1,4 +1,4 @@
-# Eric 
+# Eric Riner
 # INFO 370
 
 require(zoo)
